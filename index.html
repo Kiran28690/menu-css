@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS Menu</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            .bg-body{
+                background-image: url("img/bg.png");
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: .8125em;
+            }
+            .nav-header{
+                width: 1280px;
+                height: 50px;
+                background-color: #333;
+                margin: 20px auto;
+            }
+            .nav-header > ul{
+                list-style: none;
+            }
+            .nav-header > ul > li{
+                float: left;
+            }
+            .nav-header > ul > li:hover > a{
+                background: #ff6347;
+            }
+            .nav-header > ul > li > a{
+                text-decoration: none;
+                color: #fff;
+                line-height: 50px;
+                padding: 18px;
+               
+            }
+            .active{
+                background: #ff6347;
+            }
+            .nav-header > ul > li > a > img {
+                width: 20px;
+                height: 20px;
+            }
+            .sub-menu{
+                /* background-color: #fff; */
+                position: absolute;
+                top: 50px;
+                left: 0;
+                padding-left: 0;
+                list-style: none;
+                display: none;
+            }
+            .sub-menu > li{
+                position: relative;
+            }
+            .sub-menu > li > a{
+                display: block;
+                width: 225px;
+                background-color: #fff;
+                color: #555;
+                text-decoration: none;
+                line-height: 60px;
+                padding-left: 26px;
+           }
+           .menu > li:hover > .sub-menu > li > a:hover{
+                background: #ff6347;
+                color: #fff;
+           }
+           .menu > li {
+            position: relative;
+           }
+           .submenu-one{
+                width: 250px;
+                height: 60px;
+                background-color: #fff;
+                position: absolute;
+                top: 0;
+                left: 250px;
+           }
+           .submenu-two{
+                width: 250px;
+                height: 60px;
+                background-color: #fff;
+                position: absolute;
+                top: 0;
+                left: 250px;
+           }
+           .menu li:hover > .sub-menu{
+                display: block;
+           }
+           .menu li:hover > a{
+                background: #ff6347;
+                color: #fff;
+           }
+        </style>
+    </head>
+    <body class="bg-body">
+        <nav class="nav-header">
+            <ul class="menu">
+                <li><a href="#"> <img src="./img/ufo.png" alt="Company Logo"> Company Logo</a></li>
+                <li><a href="#" class="active"><i class="fa fa-home"></i> Active </a></li>
+                <li><a href="#">Dropdown <i class="fa fa-chevron-down"></i></a>
+                    <ul class="sub-menu">
+                        <li><a href="#"> Item one </a></li>
+                        <li><a href="#"> Item right side <i class="fa fa-chevron-right"></i> </a>
+                            <ul class="sub-menu submenu-one">
+                                <li><a href="#"> Level 2 </a></li>
+                                <li><a href="#"> Level 2  <i class="fa fa-chevron-right"></i> </a>
+                                    <ul class="sub-menu submenu-two">
+                                        <li><a href="#">Level 3</a></li>
+                                        <li><a href="#">Level 3</a></li>
+                                        <li><a href="#">Level 3</a></li>
+                                        <li><a href="#">Level 3</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#"> Level 2 </a></li>
+                                <li><a href="#"> Level 2 </a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#"> Item two </a></li>
+                        <li><a href="#"> Item left side <i class="fa fa-chevron-left"> </i></a></li>
+                        <li><a href="#"> Item four </a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Mega Menu <i class="fa fa-chevron-down"></i></a></li>
+                <li><a href="#">Grid <i class="fa fa-chevron-down"></i></a></li>
+                <li><a href="#">Tab Bar <i class="fa fa-chevron-down"></i></a></li>
+                <li><a href="#">Images <i class="fa fa-chevron-down"></i></a></li>
+                <li><a href="#">Contact <i class="fa fa-chevron-down"></i></a></li>
+            </ul>
+        </nav>
+    </body>
+</html>
